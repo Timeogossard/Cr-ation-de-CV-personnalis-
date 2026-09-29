@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Créez gratuitement un CV professionnel français en quelques minutes.">
+<title>Mon CV — Créateur de CV professionnel</title>
+<style>
+:root{--ink:#172033;--muted:#64748b;--line:#e2e8f0;--bg:#f8fafc;--card:#fff;--accent:#24558a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+nav{height:66px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:10}
+.logo{font-weight:800;font-size:20px;color:var(--accent)}nav a{text-decoration:none;color:var(--ink);margin-left:22px;font-size:14px}
+.hero{padding:80px 6%;background:linear-gradient(135deg,#eef5fb,#fff);text-align:center}.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.05;margin:0 auto 20px;max-width:900px}.hero p{font-size:18px;color:var(--muted);max-width:680px;margin:0 auto 30px;line-height:1.6}
+.btn{display:inline-block;border:0;border-radius:9px;padding:13px 20px;font-weight:800;text-decoration:none;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:#e9eef4;color:var(--ink)}
+.features{max-width:1100px;margin:0 auto;padding:55px 6%;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.card h3{margin:8px 0}.card p{color:var(--muted);line-height:1.5;font-size:14px}
+.generator{display:grid;grid-template-columns:minmax(300px,430px) minmax(320px,1fr);gap:22px;max-width:1400px;margin:0 auto;padding:30px 18px 70px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.panel h2{font-size:17px;margin:0 0 14px}
+label{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}input,textarea,select{width:100%;border:1px solid #cbd5e1;border-radius:7px;padding:9px;font:inherit}textarea{min-height:78px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.section{border-top:1px solid var(--line);padding-top:15px;margin-top:15px}.item{border:1px solid var(--line);padding:12px;border-radius:8px;margin-top:10px}.item-head{display:flex;justify-content:space-between}.remove{border:0;background:#fce8e8;color:#9b2222;padding:5px 8px;border-radius:6px}.hint{font-size:12px;color:var(--muted)}
+.preview-wrap{overflow:auto}.cv{width:210mm;min-height:297mm;background:#fff;box-shadow:0 5px 25px #0001;padding:17mm}
+.cv-head{border-bottom:2px solid var(--accent);padding-bottom:12px}.cv h1{font-size:30px;margin:0 0 4px}.title{color:var(--accent);font-weight:800}.contact{font-size:11px;color:var(--muted);margin-top:8px}.cv h2{text-transform:uppercase;letter-spacing:1px;font-size:13px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:4px;margin:18px 0 9px}.cv p,.cv li{font-size:11.5px;line-height:1.5}.job{margin-bottom:11px}.jobtop{display:flex;justify-content:space-between;gap:10px}.jobtitle{font-weight:800}.date{color:var(--muted);white-space:nowrap}.cv ul{margin:4px 0 0 17px;padding:0}.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}.empty{color:#9ca3af;font-style:italic}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);background:#fff}
+@media(max-width:900px){.features{grid-template-columns:1fr}.generator{grid-template-columns:1fr}nav a{margin-left:10px}}
+@media print{nav,.hero,.features,.panel,footer{display:none!important}.generator{display:block;padding:0}.cv{box-shadow:none;margin:0;width:210mm;padding:15mm}@page{size:A4;margin:0}}
+</style>
+</head>
+<body>
+<nav><div class="logo">Mon CV</div><div><a href="#accueil">Accueil</a><a href="#creer">Créer mon CV</a></div></nav>
+
+<section class="hero" id="accueil">
+<h1>Créez un CV professionnel, simplement.</h1>
+<p>Un générateur de CV français gratuit, pensé pour être rapide, sobre et facile à utiliser sur téléphone comme sur ordinateur.</p>
+<a class="btn primary" href="#creer">Créer mon CV gratuitement</a>
+</section>
+
+<section class="features">
+<div class="card"><div>✦</div><h3>Simple</h3><p>Remplissez vos informations et visualisez immédiatement le résultat.</p></div>
+<div class="card"><div>▣</div><h3>Professionnel</h3><p>Une mise en page française sobre, adaptée à de nombreuses candidatures.</p></div>
+<div class="card"><div>↧</div><h3>PDF</h3><p>Téléchargez votre CV grâce à la fonction d'impression PDF de votre appareil.</p></div>
+</section>
+
+<section class="generator" id="creer">
+<div class="panel">
+<h2>Votre CV</h2>
+<label>Modèle</label><select id="template"><option value="classic">Classique</option><option value="minimal">Minimal</option><option value="modern">Moderne</option></select>
+<label>Prénom et nom</label><input id="name" placeholder="Marie Dupont">
+<label>Titre professionnel</label><input id="headline" placeholder="Assistante administrative">
+<div class="row"><div><label>Téléphone</label><input id="phone" placeholder="06 00 00 00 00"></div><div><label>Email</label><input id="email" placeholder="prenom@email.fr"></div></div>
+<div class="row"><div><label>Ville</label><input id="city" placeholder="Metz"></div><div><label>LinkedIn / site</label><input id="web" placeholder="linkedin.com/in/..."></div></div>
+<div class="section"><h2>Profil</h2><textarea id="profile" placeholder="Présentez votre profil en quelques lignes."></textarea></div>
+<div class="section"><h2>Expériences</h2><div id="experiences"></div><button class="btn secondary" type="button" onclick="addExperience()">+ Ajouter</button></div>
+<div class="section"><h2>Formation</h2><div id="education"></div><button class="btn secondary" type="button" onclick="addEducation()">+ Ajouter</button></div>
+<div class="section"><h2>Compétences</h2><textarea id="skills" placeholder="Une compétence par ligne"></textarea></div>
+<div class="section"><h2>Langues</h2><textarea id="languages" placeholder="Une langue par ligne"></textarea></div>
+<br><button class="btn primary" onclick="window.print()">Télécharger en PDF</button>
+<button class="btn secondary" onclick="resetForm()">Réinitialiser</button>
+<p class="hint">Cette version fonctionne localement : aucune donnée n'est envoyée à un serveur.</p>
+</div>
+
+<div class="preview-wrap"><div class="cv" id="cv">
+<div class="cv-head"><h1 id="p-name">Votre prénom et nom</h1><div class="title" id="p-headline">Votre titre professionnel</div><div class="contact" id="p-contact">Téléphone · Email · Ville · LinkedIn / site</div></div>
+<h2>Profil</h2><p id="p-profile" class="empty">Votre profil apparaîtra ici.</p>
+<h2>Expériences professionnelles</h2><div id="p-exp"><p class="empty">Ajoutez vos expériences.</p></div>
+<div class="two"><div><h2>Formation</h2><div id="p-edu"><p class="empty">Ajoutez vos formations.</p></div></div><div><h2>Compétences</h2><div id="p-skills"><p class="empty">Ajoutez vos compétences.</p></div><h2>Langues</h2><div id="p-lang"><p class="empty">Ajoutez vos langues.</p></div></div></div>
+</div></div>
+</section>
+<footer>Mon CV — Générateur gratuit de CV · Version 2</footer>
+
+<script>
+const $=id=>document.getElementById(id), esc=s=>(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+function addExperience(x={}){let d=document.createElement('div');d.className='item exp';d.innerHTML=`<div class="item-head"><b>Expérience</b><button class="remove">Supprimer</button></div><div class="row"><div><label>Poste</label><input class="role" value="${esc(x.role)}" placeholder="Poste"></div><div><label>Entreprise</label><input class="company" value="${esc(x.company)}" placeholder="Entreprise"></div></div><div class="row"><div><label>Période</label><input class="date" value="${esc(x.date)}" placeholder="2023 — 2025"></div><div><label>Ville</label><input class="place" value="${esc(x.place)}" placeholder="Metz"></div></div><label>Missions / résultats</label><textarea class="desc" placeholder="Une mission par ligne">${esc(x.desc)}</textarea>`;$('experiences').appendChild(d);d.querySelector('.remove').onclick=()=>{d.remove();render()};d.querySelectorAll('input,textarea').forEach(e=>e.oninput=render);render()}
+function addEducation(x={}){let d=document.createElement('div');d.className='item edu';d.innerHTML=`<div class="item-head"><b>Formation</b><button class="remove">Supprimer</button></div><label>Diplôme / formation</label><input class="degree" value="${esc(x.degree)}" placeholder="BTS Gestion de la PME"><div class="row"><div><label>Établissement</label><input class="school" value="${esc(x.school)}" placeholder="Établissement"></div><div><label>Année</label><input class="edate" value="${esc(x.date)}" placeholder="2024"></div></div>`;$('education').appendChild(d);d.querySelector('.remove').onclick=()=>{d.remove();render()};d.querySelectorAll('input,textarea').forEach(e=>e.oninput=render);render()}
+function lines(s){return (s||'').split(/\n+/).map(x=>x.trim()).filter(Boolean)}
+function render(){
+$('p-name').textContent=$('name').value||'Votre prénom et nom';$('p-headline').textContent=$('headline').value||'Votre titre professionnel';
+let c=[$('phone').value,$('email').value,$('city').value,$('web').value].filter(Boolean);$('p-contact').textContent=c.length?c.join(' · '):'Téléphone · Email · Ville · LinkedIn / site';
+let p=$('profile').value.trim();$('p-profile').textContent=p||'Votre profil apparaîtra ici';$('p-profile').className=p?'':'empty';
+let ex=[...document.querySelectorAll('.exp')].map(d=>({role:d.querySelector('.role').value,company:d.querySelector('.company').value,date:d.querySelector('.date').value,place:d.querySelector('.place').value,desc:d.querySelector('.desc').value})).filter(x=>x.role||x.company||x.desc);
+$('p-exp').innerHTML=ex.length?ex.map(x=>`<div class="job"><div class="jobtop"><div><span class="jobtitle">${esc(x.role||'Poste')}</span>${x.company?' — '+esc(x.company):''}${x.place?' · '+esc(x.place):''}</div><span class="date">${esc(x.date)}</span></div>${x.desc?'<ul>'+lines(x.desc).map(y=>'<li>'+esc(y)+'</li>').join('')+'</ul>':''}</div>`).join(''):'<p class="empty">Ajoutez vos expériences.</p>';
+let ed=[...document.querySelectorAll('.edu')].map(d=>({degree:d.querySelector('.degree').value,school:d.querySelector('.school').value,date:d.querySelector('.edate').value})).filter(x=>x.degree||x.school);
+$('p-edu').innerHTML=ed.length?ed.map(x=>`<div class="job"><div class="jobtop"><b>${esc(x.degree||'Formation')}</b><span class="date">${esc(x.date)}</span></div><p>${esc(x.school)}</p></div>`).join(''):'<p class="empty">Ajoutez vos formations.</p>';
+let sk=lines($('skills').value),la=lines($('languages').value);$('p-skills').innerHTML=sk.length?'<ul>'+sk.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'<p class="empty">Ajoutez vos compétences.</p>';$('p-lang').innerHTML=la.length?'<ul>'+la.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'<p class="empty">Ajoutez vos langues.</p>';
+applyTemplate();
+}
+function applyTemplate(){let t=$('template').value,cv=$('cv');cv.style.setProperty('--accent',t==='modern'?'#7c3aed':t==='minimal'?'#334155':'#24558a');cv.style.fontFamily=t==='minimal'?'Georgia,serif':'Arial,sans-serif';}
+function resetForm(){if(!confirm('Réinitialiser le CV ?'))return;document.querySelectorAll('input,textarea').forEach(e=>e.value='');$('experiences').innerHTML='';$('education').innerHTML='';addExperience();addEducation()}
+document.querySelectorAll('input,textarea,select').forEach(e=>e.addEventListener('input',render));$('template').onchange=render;addExperience();addEducation();render();
+</script>
+</body>
+</html>
